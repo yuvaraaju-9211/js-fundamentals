@@ -54,3 +54,19 @@ function findDuplicates(arr) {
   return answer;
 }
 console.log(findDuplicates(arr));
+
+let numArr = [23, 43, 67, 89, 62, 29];
+let elem = 89;
+function findTheNumber(arr, ele) {
+  let answer = -1;
+  for (const i in arr) {
+    if (arr[i] !== ele) {
+      continue;
+    } else {
+      answer = i - 0;
+    }
+  }
+
+  return answer;
+}
+console.log(findTheNumber(numArr, elem));

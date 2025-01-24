@@ -68,3 +68,16 @@ function mergeArray(arr1, arr2) {
   return finArr;
 }
 console.log(mergeArray(arr1, arr2));
+
+finStr = "Hello";
+function reverseString(str) {
+  chArr = [...str]; // convert string to char array
+  console.log(chArr);
+  str = "";
+  for (i of chArr) {
+    str = i + str;
+  }
+  return str;
+}
+
+console.log(reverseString(finStr));

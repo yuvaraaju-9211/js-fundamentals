@@ -10,7 +10,7 @@ let a = 10;
 console.log(a);
 
 const sentence = "Hello World!";
-const charToFind = 'o';
+const charToFind = "o";
 // const indexOfChar = sentence.indexOf(charToFind).toUpperCase();
 // console.log("output: " + indexOfChar);
 
@@ -19,12 +19,46 @@ let secondMon = 800;
 let thirdMon = 999;
 
 let isEligible = true;
-isEligible = (firstMon > 999 && secondMon > 999) ||
+isEligible =
+  (firstMon > 999 && secondMon > 999) ||
   (firstMon > 999 && thirdMon > 999) ||
   (secondMon > 999 && thirdMon > 999);
 
 console.log("eligible: ", isEligible);
 
-let p = 8, q = 3, r = 5;
-let result = (p % q === 2) && (r > 2);
+let p = 8,
+  q = 3,
+  r = 5;
+let result = p % q === 2 && r > 2;
 console.log(result);
+
+const goods = {
+  apple: { price: 150, quantity: 2 },
+  banana: { price: 75, quantity: 3 },
+  orange: { price: 125, quantity: 1 },
+};
+// calculatePrice function
+function calculatePrice(goods) {
+  let totalPrice = 0;
+  for (let item in goods) {
+    console.log(`item is ${item}, price is ${goods[item].price}`);
+    console.log(goods[item]);
+    totalPrice += goods[item].price * goods[item].quantity;
+  }
+  return totalPrice;
+}
+
+console.log(calculatePrice(goods));
+
+function multiply(a, b) {
+  return a * b;
+}
+console.log(multiply);
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5));
