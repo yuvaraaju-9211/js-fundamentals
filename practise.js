@@ -62,3 +62,10 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 console.log(factorial(5));
+
+var num = 10;
+function foo() {
+  console.log(num); // local uninitialized variable
+  var num = 20;
+}
+foo();
