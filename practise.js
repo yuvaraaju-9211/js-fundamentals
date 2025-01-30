@@ -69,3 +69,22 @@ function foo() {
   var num = 20;
 }
 foo();
+
+/**
+ * An improved version (Durstenfeld) of the Fisher-Yates algorithm with O(n) time complexity
+ * Permutes the given array
+ * @param array array to be shuffled
+ */
+function fisherYates(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var index = Math.floor(Math.random() * i);
+    //swap
+    var tmp = array[index];
+    array[index] = array[i];
+    array[i] = tmp;
+  }
+  console.log(array);
+}
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr);
+fisherYates(arr);
