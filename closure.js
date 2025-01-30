@@ -10,6 +10,25 @@ function outerPrint() {
 }
 outerPrint();
 
+// one style to write closure
+function createCounter() {
+  let count = 0;
+  function increment() {
+    count++;
+    console.log(count);
+  }
+  function decrement() {
+    count--;
+    console.log(count);
+  }
+  return { increment, decrement };
+}
+const counter = createCounter();
+counter.increment();
+counter.increment();
+counter.decrement();
+
+// another style to write closure
 function cart() {
   let items = 0;
   return {

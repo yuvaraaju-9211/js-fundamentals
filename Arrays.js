@@ -8,11 +8,11 @@ historyMarks[0] = 15;
 console.log(historyMarks);
 
 // heterogenous - items of different data types
-const studentDetails = ["Manu", 2008, 'Dancing'];
+const studentDetails = ["Manu", 2008, "Dancing"];
 console.log(studentDetails);
 
 // define using new
-const arr = new Array("Manu", 'Chitti');
+const arr = new Array("Manu", "Chitti");
 console.log(arr);
 
 // Arrays in JS are dynamic - can be shrunk and grown
@@ -63,16 +63,23 @@ console.log(`Is JJ a valid team? ${hasTeam}`);
 
 // slice extracts elements without altering the original array
 console.log(teams);
-console.log("slice",teams.slice(3));
-console.log("-ve slice",teams.slice(-2));
+console.log("slice", teams.slice(3));
+console.log("-ve slice", teams.slice(-2));
 
 // splice inserts/deletes elements in the original array
 console.log(teams);
-console.log("cut array", teams.splice(1,2)); // from index 1, gives 2 elements
+console.log("cut array", teams.splice(1, 2)); // from index 1, gives 2 elements
 console.log("remaining", teams); // remaining elements in the array
-console.log("inserting", teams.splice(1,0,"DC","RCB")); // from index 1, gives 0 elements, adds 2
+console.log("inserting", teams.splice(1, 0, "DC", "RCB")); // from index 1, gives 0 elements, adds 2
 console.log(teams);
 
 // concat merges two arrays but does not modify original arrays
 const mergedArray = teams.concat(cities);
 console.log(mergedArray);
+
+// ways to declare arrays
+const args1 = Array.prototype.slice.call(arguments);
+// or
+const args2 = Array.from(arguments);
+// or
+const args3 = [...arguments];
