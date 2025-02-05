@@ -12,8 +12,10 @@ const student = {
 };
 
 student.address = "habsiguda";
+student["personality"] = "short-tempered";
 console.log(student);
 console.log(student.name);
 console.log(student["age"]);
+console.log(student["personality"]);
 console.log(student["show"]);
 student.show();
