@@ -88,3 +88,13 @@ function fisherYates(array) {
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(arr);
 fisherYates(arr);
+
+// sort function
+console.log("Array sorting");
+const sortedArr = arr;
+console.log(sortedArr);
+console.log(sortedArr.sort()); // default acending order
+console.log(sortedArr.sort((a, b) => a - b)); // ascending order
+console.log(sortedArr.sort((a, b) => b - a)); // descending order
+console.log(sortedArr.sort((a, b) => (a > b ? 1 : -1))); // ascending order
+console.log(sortedArr.sort((a, b) => (a < b ? 1 : -1))); // descending order

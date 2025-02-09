@@ -46,8 +46,9 @@ clozure.addItem();
 clozure.addItem();
 console.log(clozure.getItem());
 
-// example of closure
-// Complete the genrateID function
+// examples of closures
+
+// genrateID function
 function generateID(num) {
   //Implement Your function here
   let startID = num;
@@ -61,3 +62,32 @@ function generateID(num) {
 const func = generateID(99);
 console.log(func()); //Output : A_2023_99
 console.log(func()); // Output: A_2023_100
+
+// performOperation
+function performOperation(operation) {
+  switch (operation) {
+    case "sum":
+      return function (...numbers) {
+        return numbers.reduce((acc, cur) => acc + cur, 0);
+      };
+      break;
+    case "product":
+      return function (...numbers) {
+        return numbers.reduce((acc, cur) => acc * cur, 1);
+      };
+      break;
+    default:
+      return function () {
+        return "invalid operation";
+      };
+  }
+}
+
+console.log("examples of closures");
+const Op1 = performOperation("sum");
+const Op2 = performOperation("product");
+const Op7 = performOperation("messy");
+
+console.log(Op1(2, 3, 4));
+console.log(Op2(2, 3, 4, 5));
+console.log(Op7(1, 2, 3));
