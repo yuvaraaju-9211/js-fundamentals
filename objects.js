@@ -1,6 +1,6 @@
 /** Objects */
 
-const student = {
+let student = {
   name: "Manu",
   age: 17,
   hobby: "Dancing",
@@ -11,11 +11,17 @@ const student = {
   },
 };
 
-student.address = "habsiguda";
-student["personality"] = "short-tempered";
-console.log(student);
-console.log(student.name);
-console.log(student["age"]);
+student.address = "habsiguda"; // add a property with dot notation
+student["personality"] = "short-tempered"; // add a property with square brackets
+student = { ...student, section: "B" }; // add property with spread operator
+console.log(student); // print object
+console.log(student.name); // access property using key
+console.log(student["age"]); // access property with square brackets
 console.log(student["personality"]);
 console.log(student["show"]);
-student.show();
+student.show(); // call a member method
+
+console.log("shallow copy");
+const student1 = student; // creates a shallow copy (pointer)
+console.log(student1.name);
+console.log(student1["name"]);
