@@ -25,3 +25,9 @@ console.log("shallow copy");
 const student1 = student; // creates a shallow copy (pointer)
 console.log(student1.name);
 console.log(student1["name"]);
+
+var x = 10;
+console.log(`x: ${x}`); // global object property
+console.log(`x: ${this.x}`); // this === global
+console.log(`x: ${window.x}`); // window (browser) === global (node.js)
+console.log(`x: ${global.x}`); // window (browser) === global (node.js)
