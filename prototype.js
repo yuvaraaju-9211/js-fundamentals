@@ -33,5 +33,5 @@ const movie3 = {
     others: String,
   },
 };
-// object z
+// object literal and its prototype
 console.log(movie3.__proto__);
