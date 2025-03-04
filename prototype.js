@@ -20,3 +20,18 @@ console.log(Object.__proto__); // prototypal inheritance
 console.log("*********");
 console.log(movie2.__proto__ === Movie.prototype);
 console.log(movie2.__proto__.__proto__ === Object.prototype);
+
+// Object is the highest in hierarchy
+console.log(movie2.__proto__.__proto__.__proto__);
+
+const movie3 = {
+  title: String,
+  year: Number,
+  genre: String,
+  cast: {
+    main_lead: String,
+    others: String,
+  },
+};
+// object z
+console.log(movie3.__proto__);
