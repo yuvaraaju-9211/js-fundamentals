@@ -35,3 +35,29 @@ const movie3 = {
 };
 // object literal and its prototype
 console.log(movie3.__proto__);
+
+// assigning values to prototype
+
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.age = 30;
+console.log(Person.prototype.age);
+const john = new Person("John");
+john.__proto__.age = 40;
+console.log(john.age);
+console.log(Person.prototype.age);
+
+const myObject = {};
+// myObject.__proto__.newProperty = "value";
+// myObject.prototype.newProperty = "value";
+myObject.newProperty = "value";
+Object.prototype.newProperty = "value1";
+console.log(`myobject: ${myObject.newProperty}`);
+console.log(`myobject: proto ${myObject.prototype}`);
+console.log(`myobject _prot : ${myObject.__proto__.newProperty}`);
+console.log(myObject);
+const anoObject = {};
+console.log(`anoObject: _prot : ${anoObject.__proto__.newProperty}`);
+console.log(anoObject);
+myObject.__proto__.newProperty = "value2";
