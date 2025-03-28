@@ -1,0 +1,12 @@
+const nums = [1, 2, 3, 4, 5];
+console.log(nums);
+// console.log(nums.__proto__);
+// console.log(nums.__proto__.__proto__);
+// console.log(nums.__proto__.__proto__.__proto__);
+const obj = new Object();
+console.log(obj);
+console.log(nums.constructor === Array);
+console.log(nums.constructor);
+let arr = new Array(3);
+let result = arr.__proto__;
+console.log(result.__proto__);
