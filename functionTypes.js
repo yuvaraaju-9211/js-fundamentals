@@ -44,6 +44,7 @@ let result = (() => {
 })();
 console.log(result);
 console.log(result());
+console.log(result());
 
 // generator arrow function
 let genID = (num) => {
