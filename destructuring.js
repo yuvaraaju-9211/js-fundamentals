@@ -28,3 +28,11 @@ console.log(fn);
 // console.log(firstname);
 ({ firstname: fn, lastname: ln } = obj1);
 console.log(fn);
+
+// example aliasing
+let obj2 = { name: "John", country: "Bharat", age: 30 };
+let name;
+({ name } = obj2);
+let { country: cn, age: ag } = obj2;
+obj2.country = "Canada";
+console.log(name, cn, ag, obj2.country);
