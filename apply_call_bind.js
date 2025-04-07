@@ -39,3 +39,19 @@ veh2("Bronze", 45);
 // use bind to create new function with same functionality as other
 let showDetails = car.getDetails.bind(car);
 showDetails("Red", 7);
+
+// example apply and call method
+let numbers = [5, 10, 15, 20];
+let maxNumber;
+// maxNumber = Math.max.apply(null, ...numbers);
+// console.log(`rest operator: ${maxNumber}`);
+maxNumber = Math.max.call(null, ...numbers);
+console.log(`call: rest operator: ${maxNumber}`);
+maxNumber = Math.max.apply(null, numbers);
+console.log(`array variable: ${maxNumber}`);
+maxNumber = Math.max.call(null, numbers);
+console.log(`call: array variable: ${maxNumber}`);
+maxNumber = Math.max.apply(null, [numbers]);
+console.log(`array argument: ${maxNumber}`);
+maxNumber = Math.max.call(null, [numbers]);
+console.log(`call: array argument: ${maxNumber}`);

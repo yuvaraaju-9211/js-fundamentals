@@ -1,5 +1,6 @@
 /** Constructor Function */
 
+// factory constructor function
 function movie(title, year) {
   const movieObj = {
     title: title,
