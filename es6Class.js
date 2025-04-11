@@ -167,3 +167,57 @@ console.log(myCar.getModel());
 console.log(myCar.getYear());
 console.log(myCar.getColor());
 console.log(myCar.getMileage());
+
+// expense tracker example
+//complete the ExpenseTracker class.
+// Do not alter the starter code
+function main2() {
+  class ExpenseTracker {
+    //Create your private properites here
+    #income;
+    #expenses;
+    //Create a constructor function
+    constructor(incom) {
+      this.#income = incom;
+      this.#expenses = [];
+    }
+
+    //create your private properties to calculate expenses
+    #calculateTotalExpenses() {
+      const totalExpenses = this.#expenses.reduce((acc, obj) => {
+        console.log(`${acc} and amount: ${obj.amount}`);
+        return acc + obj.amount;
+      }, 0);
+      return totalExpenses;
+    }
+
+    //Create your public properties here
+    // expense function
+    expense = {
+      name: "",
+      amount: "",
+      date: "",
+    };
+
+    addExpense(name, amount, date) {
+      let tempExp = Object.create(this.expense);
+      tempExp.name = name;
+      tempExp.amount = amount;
+      tempExp.date = date;
+      this.#expenses.push(tempExp);
+      console.log(tempExp);
+    }
+
+    calculateBalance() {
+      return this.#income - this.#calculateTotalExpenses();
+    }
+  }
+  //The class should function accordingly.
+  const tracker = new ExpenseTracker(5000);
+  tracker.addExpense("Rent", 1000, "2021-10-01");
+  tracker.addExpense("Groceries", 500, "2021-10-02");
+  console.log(tracker.calculateBalance()); // should output 3500
+  return ExpenseTracker;
+}
+
+main2();
